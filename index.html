@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Scroller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        
+        <nav class="navbar">
+            <section class="navsection1">
+                <h3>Movies</h3>
+                <h3>Series</h3>
+            </section>
+            <h1>TOPFLIX</h1>
+
+            <section class="navsection2">
+                <h2>Topi1@GitHub</h2>
+            </section>
+        </nav>
+        
+
+
+        <div class="scrollerMain">
+            <img class="backImg">
+
+            <section class="info">
+                <h1 class="showName"></h1>
+                <h2 class="showInfo"></h2>
+                <div class="options"></div>
+            </section>
+            
+
+            <div class="theScroller">
+
+                <div class="media active" onclick=changeImg(this.firstElementChild)>
+                     <img class= "mediaImg" src="pics/mountain.jpeg" title="Spring Of Italy" 
+                     style="font-family: 'Lugrasimo', cursive;" alt = "Follow Johnny Jakobson as he travels accross Italy."> 
+                     <p>Spring Of Italy</p> 
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/star.jpeg" title="Secrets Of The Universe" 
+                    style="font-family: 'Tektur', cursive;" alt="Discover the vast space in this documentary.">
+                    <p>Secrets Of The Universe</p>  
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/car.jpeg" title="Car Workshop" 
+                    style="font-family: 'Permanent Marker', cursive;" alt="Check out what these guys can do to a car.">
+                    <p>Car Workshop</p>  
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/beach.jpeg" title="Mystery Summer" 
+                    style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" alt="Something strange is happening on this vacation.">
+                    <p>Mystery Summer</p>  
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/rose.jpeg" title="Catching The Red Rose Killer" 
+                    style="font-family:'Caprasimo', cursive;" alt="Millie McKinnon investigates this horrible case.">
+                    <p>Catching The Red Rose Killer</p>  
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/art.jpeg" title="Modern Art Show" 
+                    style="font-family: 'Lumanosimo', cursive;" alt="Documentary about modern art and artists."> 
+                    <p>Modern Art Show</p> 
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/lightning.jpeg" title="Gods Of The Vikings" 
+                    style="font-family: 'Chela One', cursive;" alt="Who were The Gods that Vikings worshipped? Find out.">
+                    <p>Gods Of The Vikings</p>  
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/skull.jpeg" title="MARTYR IV" 
+                    style="font-family: 'Yuji Boku', serif;" alt="Horrifying sequel to the MARTYR-trilogy.">
+                    <p>MARTYR IV</p>  
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/village.jpeg" title="History Of Saxons" 
+                    style="font-family: 'Dancing Script', cursive;" alt="Learn about Saxons and their traditions.">
+                    <p>History Of Saxons</p>  
+                </div>
+
+                <div class="media" onclick=changeImg(this.firstElementChild)> 
+                    <img class= "mediaImg" src="pics/rainbow.jpeg" title="Iceland Adventures" 
+                    style="font-family: 'Cinzel', serif;" alt="Great adventure around Iceland and its beauty.">
+                    <p>Iceland Adventures</p>  
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
