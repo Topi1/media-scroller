@@ -159,16 +159,14 @@ body {
 /* The Media Scroller */
 
 .scrollerMain {
+    bottom: 0;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    bottom: 0;
 }
 
 .theScroller {
-    margin-bottom: 0.5rem;
-    bottom: 0;
     z-index: 2;
     align-self: center;
     height: 180px;
@@ -197,7 +195,7 @@ body {
 }
 
 .media {
-    height: 100%;
+    
     border-radius: 7px;
     background: rgba(255, 255, 255, 0.2);
     padding: 0.3rem;
@@ -232,8 +230,6 @@ body {
 
 .mediaImg {
     border-radius: 7px;
-    height: 100%;
-    width: 100%;
     object-fit: cover;
     aspect-ratio: 4 / 3;
     transition: 0.3s;
