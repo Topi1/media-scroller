@@ -163,9 +163,11 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    bottom: 0;
 }
 
 .theScroller {
+    bottom: 0;
     z-index: 2;
     align-self: center;
     height: 180px;
