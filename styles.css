@@ -17,6 +17,8 @@ body {
 }
 
 .main {
+    padding: 0;
+    margin: 0;
     height: 100vh;
     width: 100vw;
     background-color: black;
@@ -128,16 +130,15 @@ body {
 .options {
     align-self: flex-end;
     display: flex;
-    
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-right: 1rem;
     gap: 1rem;
     z-index: 3;
 }
 
 .optnBtn {
-    height: 70px;
-    width: 160px;
+    height: 50px;
+    width: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,6 +259,9 @@ body {
 /* Scroll buttons */
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     height: 180px;
     width: 4%;
@@ -288,30 +292,39 @@ body {
 /* Media queries for responsiveness */
 
 @media only screen and (max-width: 800px) {
+
+    .navsection1 {
+        width: 30%;
+    }
+    .navsection2 {
+        width: 30%;
+    }
+
     .showName {
-        
-        font-size: 2.9rem;
-        
-        
+        font-size: 2.6rem;
     }
     
     .showInfo {
-    
-        font-size: 1.2rem;
-        
+        font-size: 1.1rem;
     }
 
     .optnBtn {
-        height: 40px;
-        width: 100px;
+        height: 30px;
+        width: 90px;
     }
 
     .theScroller {
         grid-auto-columns: 25%;
-        height: 150px;
+        height: 140px;
+        width: 100%;
     }
 
     .btn {
         height: 150px;
+        display: none;
+    }
+
+    .media p {
+        font-size: 16px;
     }
 }
