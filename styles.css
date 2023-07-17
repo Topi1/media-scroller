@@ -9,11 +9,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
-:root {
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
 body {
     padding: 0;
     margin: 0;
@@ -322,6 +317,10 @@ body {
         width: 90px;
     }
 
+    .optnBtn h2{
+        font-size: 0.8rem;
+    }
+
     .theScroller {
         grid-auto-columns: 25%;
         height: 140px;
@@ -336,4 +335,8 @@ body {
     .media p {
         font-size: 16px;
     }
+}
+
+@media only screen and (max-width: 700px) {
+    
 }
