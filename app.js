@@ -4,13 +4,19 @@ const mediaElement = document.getElementsByClassName("media")
 const mediaImg = document.querySelector(".mediaImg")
 const showName = document.querySelector(".showName")
 const showInfo = document.querySelector(".showInfo")
+const scroller = document.querySelector(".theScroller")
 
+const rightBtn = document.querySelector(".rightBtn")
+const leftBtn = document.querySelector(".leftBtn")
+
+//When you load the page default options are:
 
 backgroundImg.src = mediaImg.src
 showName.textContent = mediaImg.title
 showName.style.fontFamily = mediaImg.style.fontFamily
 showInfo.textContent = mediaImg.alt
 
+//Change img source on click
 
 function changeImg(img) {
 
@@ -32,6 +38,7 @@ function changeImg(img) {
 
 }
 
+//Set media element active
 
 for (var i = 0; i < mediaElement.length; i++) {
     mediaElement[i].addEventListener("click", function() {
@@ -44,3 +51,15 @@ for (var i = 0; i < mediaElement.length; i++) {
       this.className += " active"
     });
   } 
+
+
+ 
+//Scroll vertically with buttons
+
+rightBtn.addEventListener("click", function () {
+  scroller.scrollLeft += 200
+})
+
+leftBtn.addEventListener("click", function () {
+  scroller.scrollLeft -= 200
+})
