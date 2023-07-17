@@ -74,6 +74,7 @@ body {
 
 .navbar:hover {
     background-color: rgba(0, 7, 5, 0.4) ;
+    box-shadow: 0px 3px 10px black;
 }
 
 /* Placeholders for the Name of the movie or show and Info*/
@@ -95,6 +96,12 @@ body {
     border-radius: 8px;
     z-index: 3;
     font-family: 'Roboto Condensed', sans-serif;
+    transition: 0.5s;
+}
+
+.info:hover {
+    background-color: rgba(0, 7, 5, 0.6) ;
+    box-shadow: 0px 3px 10px black;
 }
 
 .showName {
@@ -116,6 +123,40 @@ body {
     
 }
 
+/* Play and Info btns */
+
+.options {
+    align-self: flex-end;
+    display: flex;
+    
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    gap: 1rem;
+    z-index: 3;
+}
+
+.optnBtn {
+    height: 70px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgba(0, 7, 5, 0.7) ;
+    border-radius: 7px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid white;
+    
+}
+
+.optnBtn:hover {
+    background-color: rgba(0, 7, 5, 1) ;
+    box-shadow: 0px 3px 10px black;
+}
+
 /* The Media Scroller */
 
 .scrollerMain {
@@ -127,22 +168,26 @@ body {
 
 .theScroller {
     z-index: 2;
-    align-self: flex-end;
+    align-self: center;
     height: 180px;
-    width: 97%;
+    width: 92%;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 200px;
+    grid-auto-columns: 15%;
     gap: 1rem;
     overflow-y: hidden;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
+    scroll-behavior: smooth;
+
+    -ms-overflow-style: scroll;  
+    scrollbar-width: none;  
     
 }
 
 .theScroller > * {
-    scroll-snap-align: start;
+    scroll-snap-align: end;
 }
 
 .media {
@@ -175,8 +220,7 @@ body {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.5);
     z-index: 3;
-    overflow-y: hidden;
-    zoom: 120%;
+    box-shadow: 0px 3px 10px black;
 }
 
 .mediaImg {
@@ -190,6 +234,7 @@ body {
 
 .active {
     background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 3px 10px black;
     pointer-events: none;
 }
 
@@ -210,3 +255,63 @@ body {
     transition: 0.5s;
 }
 
+/* Scroll buttons */
+
+.btn {
+    position: absolute;
+    height: 180px;
+    width: 4%;
+    border: none;
+    color: white;
+    font-size: 5rem;
+    background-color: rgba(0, 7, 5, 0.3) ;
+    z-index: 3;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(0, 7, 5, 0.8) ;
+    box-shadow: 0px 3px 10px black;
+}
+
+.leftBtn {
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 5px;
+}
+.rightBtn {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 5px;
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 800px) {
+    .showName {
+        
+        font-size: 2.9rem;
+        
+        
+    }
+    
+    .showInfo {
+    
+        font-size: 1.2rem;
+        
+    }
+
+    .optnBtn {
+        height: 40px;
+        width: 100px;
+    }
+
+    .theScroller {
+        grid-auto-columns: 25%;
+        height: 150px;
+    }
+
+    .btn {
+        height: 150px;
+    }
+}
