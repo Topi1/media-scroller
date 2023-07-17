@@ -9,7 +9,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
-
+:root {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 
 body {
     padding: 0;
@@ -137,7 +140,7 @@ body {
 }
 
 .optnBtn {
-    height: 50px;
+    height: 40px;
     width: 140px;
     display: flex;
     align-items: center;
@@ -187,6 +190,10 @@ body {
     
 }
 
+.theScroller::-webkit-scrollbar {
+    display: none;
+}
+
 .theScroller > * {
     scroll-snap-align: end;
 }
@@ -194,7 +201,7 @@ body {
 .media {
     border-radius: 7px;
     background: rgba(255, 255, 255, 0.2);
-    padding: 0.4rem;
+    padding: 0.3rem;
     transition: 0.5s;
     box-shadow: 0px 3px 10px black;
     color: white;
@@ -295,9 +302,11 @@ body {
 
     .navsection1 {
         width: 30%;
+        font-size: 0.8rem;
     }
     .navsection2 {
         width: 30%;
+        font-size: 0.8rem;
     }
 
     .showName {
